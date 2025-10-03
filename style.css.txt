@@ -1,0 +1,233 @@
+/* --- 1. Global Styles and Reset --- */
+:root {
+    --primary-red: #D82D39; /* A strong, professional red */
+    --secondary-white: #FFFFFF;
+    --text-dark: #333333;
+    --text-light: #f4f4f4;
+    --bg-light: #f9f9f9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--secondary-white);
+}
+
+a {
+    color: var(--primary-red);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #A3242B; 
+}
+
+section {
+    padding: 60px 5%; /* Vertical padding and 5% horizontal padding */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- 2. Header and Navigation (Desktop) --- */
+header {
+    background-color: var(--primary-red);
+    color: var(--secondary-white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* CSS for the Logo Image */
+.logo {
+    font-size: 0; /* Ensures the image is the main element */
+    font-weight: normal;
+}
+
+.logo img {
+    height: 40px; /* Adjust the height of your logo */
+    width: auto;
+    display: block; 
+}
+
+#main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#main-nav li a {
+    color: var(--secondary-white);
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+#main-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+}
+
+/* --- 3. Section Styling --- */
+
+/* Hero Section (Home) */
+.hero-section {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 100px 5%;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    color: var(--primary-red);
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-red);
+    color: var(--secondary-white);
+    padding: 12px 25px;
+    border: none; 
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #A3242B; 
+}
+
+/* Services Section Grid */
+#services {
+    background-color: var(--secondary-white);
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.service-item {
+    background-color: var(--bg-light);
+    padding: 25px;
+    border-left: 5px solid var(--primary-red); 
+    border-radius: 5px;
+    flex-basis: 45%; 
+    min-width: 300px; 
+    text-align: left;
+}
+
+.service-item h3 {
+    color: var(--primary-red);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-section form {
+    max-width: 500px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* --- 4. Footer --- */
+footer {
+    background-color: var(--text-dark); 
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- 5. Media Queries for Responsive Design (Mobile View) --- */
+@media (max-width: 768px) {
+    
+    /* Navigation/Header for Mobile */
+    header {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block; 
+        background: none;
+        border: none;
+        color: var(--secondary-white);
+        font-size: 1.8em;
+        cursor: pointer;
+    }
+    
+    #main-nav {
+        /* Start hidden and full width */
+        display: none; 
+        width: 100%;
+        position: absolute;
+        top: 55px; 
+        left: 0;
+        background-color: var(--primary-red);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* JavaScript will add this class to show the menu */
+    #main-nav.active {
+        display: block;
+    }
+
+    #main-nav ul {
+        flex-direction: column; 
+        padding: 10px 0;
+    }
+
+    #main-nav li a {
+        padding: 15px 5%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Services Section Layout for Mobile */
+    .service-list {
+        flex-direction: column; 
+    }
+
+    .service-item {
+        min-width: unset; 
+    }
+}

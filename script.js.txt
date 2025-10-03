@@ -1,0 +1,26 @@
+// Get the button that toggles the menu
+const menuToggle = document.querySelector('.menu-toggle');
+// Get the navigation element
+const nav = document.getElementById('main-nav');
+// Get all links in the nav
+const navLinks = nav.querySelectorAll('a');
+
+// Function to toggle the menu open/closed
+function toggleMenu() {
+    nav.classList.toggle('active');
+    const isExpanded = nav.classList.contains('active');
+    menuToggle.setAttribute('aria-expanded', isExpanded);
+}
+
+// 1. Add an event listener to the menu button
+menuToggle.addEventListener('click', toggleMenu);
+
+// 2. Add an event listener to close the menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Only close if the menu is active/visible
+        if (nav.classList.contains('active')) {
+            toggleMenu(); 
+        }
+    });
+});

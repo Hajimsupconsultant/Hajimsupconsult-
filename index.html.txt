@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajims Supermarket Consultancy</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="[Https://imgur.com/a/ETj2S0w.PNG/.JPG]" alt="Hajims Consultancy Logo">
+        </div>
+        
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+            &#9776; </button>
+
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <h1>Expert Solutions for Supermarket Growth</h1>
+            <p>We transform operational challenges into profitable opportunities for your retail business.</p>
+            <a href="#services" class="cta-button">Explore Our Consulting Services</a>
+        </section>
+
+        <section id="about">
+            <h2>About Hajims Consultancy</h2>
+            <p>Hajims Supermarket Consultancy is dedicated to enhancing the efficiency, profitability, and customer experience of grocery and retail stores. Our team offers data-driven strategies and hands-on guidance to ensure your supermarket not only survives but thrives in a competitive market.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Core Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Operational Audits & Efficiency</h3>
+                    <p>In-depth analysis of in-store workflows, layout optimization, and cost-reduction strategies to minimize operational waste.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Inventory & Supply Chain</h3>
+                    <p>Optimization of stock levels, reduction of shrinkage, and implementation of end-to-end traceability for fresh and non-perishable goods.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Pricing & Merchandising</h3>
+                    <p>Developing effective pricing strategies, category management, and store display planning to maximize sales and customer engagement.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Staff Training & HR Solutions</h3>
+                    <p>Programs focused on excellence in customer service, staff retention, and compliance with industry standards and safety regulations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get Started Today</h2>
+            <p>Ready to boost your store's performance? Contact us for a free initial consultation.</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:hajimsupconsult@gmail.com">hajimsupconsult@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+2348024488705">08024488705</a>, <a href="tel:+2347064491335">07064491335</a></p>
+            </div>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Supermarket Email" required>
+                <textarea placeholder="Tell us about your biggest challenge"></textarea>
+                <button type="submit" class="cta-button">Request a Consultation</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hajims Supermarket Consultancy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
